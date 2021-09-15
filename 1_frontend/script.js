@@ -7,7 +7,7 @@ let jokes = [];
 
 //functions
 const randomJoke = () => {
-  fetch('http://localhost:5000/api/jokes')
+  fetch('https://node-exam-app.herokuapp.com/api/jokes')
     .then((res) => res.json())
     .then((data) => {
       let jokes = data.result.slice(0, 10);
@@ -26,7 +26,7 @@ const randomJoke = () => {
 
 oneJoke.addEventListener('clicked', randomJoke);
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('http://localhost:5000/api/jokes' + 'chuck')
+  fetch('https://node-exam-app.herokuapp.com/api/jokes' + 'chuck')
     .then((res) => res.json())
     .then((data) => jokes.push(...data.result));
 });
